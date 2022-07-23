@@ -13,7 +13,7 @@
 
 <P>  The time on the server is ${serverTime}. </P>
 
- <a href="<%=request.getContextPath() %>/getMainPage.do">
+ <a href="<%=request.getContextPath() %>/goMainPage.do">
 	<h3>GO MAIN</h3>
 </a>
 </body>

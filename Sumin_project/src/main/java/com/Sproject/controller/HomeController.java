@@ -30,10 +30,22 @@ public class HomeController {
 	}
 	
 	
-	@RequestMapping("getMainPage.do")
+	@RequestMapping("goMainPage.do")
 	public String goMainPage() {
 		
 		return "main";
+	}
+	
+	@RequestMapping("goAboutPage.do")
+	public String goAboutPage() {
+		
+		return "about";
+	}
+	
+	@RequestMapping("goShopPage.do")
+	public String goShopPage() {
+		
+		return "shop";
 	}
 	
 }

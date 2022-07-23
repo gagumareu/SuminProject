@@ -7,57 +7,6 @@
 <title>Insert title here</title>
 <style type="text/css">
 	
-	p {
-	    display: block;
-	    margin-block-start: 1em;
-	    margin-block-end: 1em;
-	    margin-inline-start: 0px;
-	    margin-inline-end: 0px;
-	    margin-top: 0;
-	    margin-bottom: 0;
-/*     margin-bottom: 1em; */
-	}
-	
-	a {
-		text-decoration: none;
-	}
-
-	.ant_row {
-		display: flex;
-/* 		flex-flow: row wrap; */
-	
-	}
-	.contents_container {
-		width: 100%;
-	    height: calc(100vh - 50px);
-	    margin: 0 auto;
-	    position: relative;
-	
-	}
-	.contents_wrap {
-		padding: 0 15px;
-   	 	height: calc(100% - 57px);
-	}
-	
-	.scrollbar_wrap{
-		overflow-y: scroll;
-	    overflow-x: hidden;
-	    height: calc(100vhvh- 180px);
-	}
-	.left_wrap {
-		display: block;
-	    flex: 0 0 37.5%;
-	    max-width: 37.5%;
-	    border-right: 2px solid #ff4a2b;
-	}
-	
-	.right_wrap {
-		display: block;
-	    flex: 0 0 62.5%;
-	    max-width: 62.5%;
-	    border-right: 2px solid #ff4a2b;
-	}
-	
 	.ant_select {
 		box-sizing: border-box;
 	    margin: 0;
@@ -271,7 +220,6 @@
 				</div> <!-- contents_wrap scrollbar_wrap -->
 			</div> <!-- left_wrap -->
 			
-			
 			<div class="right_wrap">
 				<div class="ant_select project_select_wrap">
 					<span class="ant_select_selector section_title">
@@ -307,6 +255,46 @@
 								<a class="project_link" href="#">
 									<p>POKEMON</p>
 									<p>꼬부기</p>
+								</a>
+							</div> <!-- img_wrap -->
+						</div> <!-- contents_boxes -->
+						
+						<div class="contents_boxes">
+							<div class="img_wrap">
+								<img alt="" src="./resources/upload/img/000101.png">
+								<a class="project_link" href="#">
+									<p>POKEMON</p>
+									<p>이상해씨</p>
+								</a>
+							</div> <!-- img_wrap -->
+						</div> <!-- contents_boxes -->
+						
+						<div class="contents_boxes">
+							<div class="img_wrap">
+								<img alt="" src="./resources/upload/img/000101.png">
+								<a class="project_link" href="#">
+									<p>POKEMON</p>
+									<p>이상해씨</p>
+								</a>
+							</div> <!-- img_wrap -->
+						</div> <!-- contents_boxes -->
+						
+						<div class="contents_boxes">
+							<div class="img_wrap">
+								<img alt="" src="./resources/upload/img/000101.png">
+								<a class="project_link" href="#">
+									<p>POKEMON</p>
+									<p>이상해씨</p>
+								</a>
+							</div> <!-- img_wrap -->
+						</div> <!-- contents_boxes -->
+						
+						<div class="contents_boxes">
+							<div class="img_wrap">
+								<img alt="" src="./resources/upload/img/000101.png">
+								<a class="project_link" href="#">
+									<p>POKEMON</p>
+									<p>이상해씨</p>
 								</a>
 							</div> <!-- img_wrap -->
 						</div> <!-- contents_boxes -->
