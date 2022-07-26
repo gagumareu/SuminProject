@@ -44,7 +44,7 @@ public class HomeController {
 		
 		List<StudentsDTO> list = this.dao.getStudentsList();
 		
-		System.out.println("list-size >>> " + list.size());
+//		System.out.println("list-size >>> " + list.size());
 		
 		model.addAttribute("studentsList", list);
 		

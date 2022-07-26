@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.js"></script>
+
 <style type="text/css">
 	
 	html, body {
@@ -157,7 +160,18 @@
 	    height: 100%;
 	    right: 60px;
 	    overflow-x: hidden;
+	    transition: 0.37s;
+	    
 	}
+	
+	.header_container.true {
+	    width: 400px;
+    	right:59px;
+    	opacity: 1;
+    	transition: 0.37s;
+    	background:white;
+	}
+	
 	
 /* 	.header_container{ */
 /* 		width: 400px; */
@@ -169,8 +183,62 @@
 	.header_wrap {
 		padding: 30px 20px;
 	}
+	
+	.hamburger_btn {
+		position: relative;
+		transition: .3s ease-in-out;
+/* 		width: 45px; */
+		height: 34px;
+		display: flex;
+   		justify-content: center;
+	}
+	
+	.hamburger_btn span {
+		position: absolute;
+		width:40px;
+		height: 2px;
+		border-radius: 4px;
+		background: #ff4a2b;
+		top: 0;
+		transition: 0.2s;
+		
+	}
+	
+	.hamburger_btn span:nth-child(1){
+		top:0;
+	}
+	
+	.hamburger_btn span:nth-child(2),
+	.hamburger_btn span:nth-child(3){
+		top:13px;
+	}
+	.hamburger_btn span:nth-child(4) {
+		top: 26px;
+	}
+	
+	
+	.hamburger_btn.active span:nth-child(1),
+	.hamburger_btn.active span:nth-child(4){
+		opacity:0;
+	}
+	
+	.hamburger_btn.active span:nth-child(2) {
+		transform:rotate(45deg);
+	}
+	.hamburger_btn.active span:nth-child(3) {
+		transform:rotate(-45deg);
+	}
 </style>
+<script type="text/javascript">
+	
+	$(function(){
+		$('.hamburger_btn').click(function(){
+			$(this).toggleClass('active');
+			$('.header_container').toggleClass('true')
+		});
+	});
 
+</script>
 </head>
 <body>
 
@@ -185,11 +253,16 @@
 		
 		<div class="banner_btn_right_side">
 			<div class="banner_btn_wrap">
-				<div class="">
-				
+				<div class="hamburger_btn">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
 			</div> <!-- banner_btn_wrap -->
 		</div> <!-- banner_btn_right_side -->
+		
+		
 		<div class="header_container">
 			<div class="header_wrap">
 				<ul>

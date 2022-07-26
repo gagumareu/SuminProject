@@ -89,6 +89,7 @@
 	    position: -webkit-sticky;
 	    top: 0;
 	    padding: 20px 0;
+	    background-color: white;
 	}
 	
 	.to_bold {
