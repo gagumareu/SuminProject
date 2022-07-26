@@ -51,6 +51,18 @@ public class HomeController {
 		return "main";
 	}
 	
+	@RequestMapping("goProjectAPage.do")
+	public String goProjectAPage(Model model) {
+		
+		List<StudentsDTO> list = this.dao.getStudentsList();
+		
+//		System.out.println("list-size >>> " + list.size());
+		
+		model.addAttribute("studentsList", list);
+		
+		return "projectA";
+	}
+	
 	
 	@RequestMapping("goAboutPage.do")
 	public String goAboutPage() {
@@ -62,6 +74,18 @@ public class HomeController {
 	public String goShopPage() {
 		
 		return "shop";
+	}
+	
+	@RequestMapping("goStudentsPage.do")
+	public String goStudentsPage() {
+		
+		return "students";
+	}
+	
+	@RequestMapping("goAnswerPage.do")
+	public String goAnswerPage() {
+		
+		return "answer";
 	}
 	
 }

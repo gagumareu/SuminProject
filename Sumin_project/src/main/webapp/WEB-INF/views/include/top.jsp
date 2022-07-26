@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.js"></script>
 
 <style type="text/css">
@@ -47,6 +48,11 @@
 		text-decoration: none;
 	}
 	
+	ul {
+		list-style-type: none;
+		padding: 0px;
+	}
+	
 	.ant_row {
 		display: flex;
 /* 		flex-flow: row wrap; */
@@ -84,11 +90,7 @@
  	    
 	}
 	
-	
-	
-	
-	
-	
+
 	
 	
 	
@@ -160,7 +162,7 @@
 	    height: 100%;
 	    right: 60px;
 	    overflow-x: hidden;
-	    transition: 0.37s;
+	    transition: 0.45s;
 	    
 	}
 	
@@ -168,7 +170,7 @@
 	    width: 400px;
     	right:59px;
     	opacity: 1;
-    	transition: 0.37s;
+    	transition: 0.45s;
     	background:white;
 	}
 	
@@ -228,6 +230,57 @@
 	.hamburger_btn.active span:nth-child(3) {
 		transform:rotate(-45deg);
 	}
+	
+	.sidebar_overlay_dark {
+		background: rgba(0,0,0,0.3);
+	    z-index: -1;
+	    width: calc(100% - 62px);
+	    transform: none;
+	    left: 0;
+	    top: 0;
+	    opacity: 0;
+	    min-height: 100vh;
+	    position: fixed;
+	}
+	
+	.sidebar_overlay_dark.active {
+		opacity: 1;
+    	z-index: 999;
+	} 
+	
+	.sideBar_text{
+		font-size: 28px;
+	    font-weight: 500;
+	    color: #ff4a2b;
+	}
+	
+	.sideBar_text_under {
+		font-size: 20px;
+	    font-weight: 500;
+	    color: #ff4a2b;
+	    
+	}
+	
+	.header_wrap > ul > li {
+		margin-top: 24px;
+		
+	}
+	
+	.header_list_wrap{
+/* 		height: 324px; */
+/* 	    opacity: 1; */
+	    margin-bottom: 34px;
+	    border-top: dotted 2px #ff4a2b;
+	    margin: 10px 0;
+	}
+	
+	.header_list_wrap > ul > li {
+		border-bottom: dotted 2px #ff4a2b;
+    	padding: 10px 35px;
+	}
+	
+	
+	
 </style>
 <script type="text/javascript">
 	
@@ -235,6 +288,7 @@
 		$('.hamburger_btn').click(function(){
 			$(this).toggleClass('active');
 			$('.header_container').toggleClass('true')
+			$('.sidebar_overlay_dark').toggleClass('active');
 		});
 	});
 
@@ -244,8 +298,8 @@
 
 	<div class="top_banner_warrper">
 		<div class="top_banner_container">
-			<a class="main_title_link" href="#">
-				<span>
+			<a class="main_title_link" href="<%=request.getContextPath()%>/goMainPage.do">
+				<span> 
 					SUMIN PROJECT
 				</span>
 			</a>
@@ -267,31 +321,48 @@
 			<div class="header_wrap">
 				<ul>
 					<li>
-						ABOUT
-						<a href="#">
-							
+						<a class="sideBar_text" href="<%=request.getContextPath()%>/goAboutPage.do">
+							ABOUT
 						</a>
 					</li>
 					<li>
-						PROJECT
+						<span class="sideBar_text">PROJECT</span>
 						<div class="header_list_wrap">
 							<ul>
 								<li>
-									STUDIO A
+									<a class="sideBar_text_under" href="<%=request.getContextPath()%>/goProjectAPage.do">
+										STUDIO A
+									</a>
 								</li>
 								<li>
-									STUDIO B
+									<a class="sideBar_text_under" href="<%=request.getContextPath()%>/goProjectBPage.do">
+										STUDIO B
+									</a>
 								</li>
 								<li>
-									STUDIO C
+									<a class="sideBar_text_under" href="<%=request.getContextPath()%>/goShopPage.do">
+										STUDIO C
+									</a>
 								</li>
 							</ul>
 						</div>
 					</li>
+					<li>
+						<a class="sideBar_text" href="<%=request.getContextPath()%>/goStudentsPage.do">
+							STUDENTS
+						</a>
+					</li>
+					<li>
+						<a class="sideBar_text" href="<%=request.getContextPath()%>/goAnswerPage.do">
+							ANSWER US
+						</a>
+					</li>
 				</ul>
 			</div> <!-- header_wrap -->
 		</div> <!-- header_container -->
+		<div class="sidebar_overlay_dark">
 		
+		</div>
 	</div> <!-- top_banner_warrper -->
 
 
