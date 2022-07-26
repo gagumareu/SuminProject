@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -161,6 +164,7 @@
 </style>
 </head>
 <body>
+	<c:set var="slist" value="${studentsList }" />
 	<jsp:include page="include/top.jsp"/>
 	
 	<div class="main_container">
@@ -180,6 +184,9 @@
 						<div class="title_wrap"> 
 							<p class="section_title">
 								장소성과 포스트 코로나
+							</p>
+							<p class="section_title">
+								Placeness & Post Corona
 							</p>
 							<p class="section_title">
 								Placeness & Post Corona
@@ -230,84 +237,18 @@
 				<div class="contents_wrap scrollbar_wrap">
 					<div class="section_wrap_right">
 						
-						<div class="contents_boxes">
-							<div class="img_wrap">
-								<img alt="" src="./resources/upload/img/002501.png">
-								<a class="project_link" href="#">
-									<p>POKEMON</p>
-									<p>피카츄</p>
-								</a>
-							</div> <!-- img_wrap -->
-						</div> <!-- contents_boxes -->
+						<c:forEach items="${slist }" var="dto">
+							<div class="contents_boxes">
+								<div class="img_wrap">
+									<img alt="" src="./resources/upload/img/${dto.images }">
+									<a class="project_link" href="#">
+										<p>${dto.project_name }</p>
+										<p>${dto.name }</p>
+									</a>
+								</div> <!-- img_wrap -->
+							</div> <!-- contents_boxes -->
+						</c:forEach>
 						
-						<div class="contents_boxes">
-							<div class="img_wrap">
-								<img alt="" src="./resources/upload/img/000401.png">
-								<a class="project_link" href="#">
-									<p>POKEMON</p>
-									<p>파이리</p>
-								</a>
-							</div> <!-- img_wrap -->
-						</div> <!-- contents_boxes -->
-						<div class="contents_boxes">
-							<div class="img_wrap">
-								<img alt="" src="./resources/upload/img/000701.png">
-								<a class="project_link" href="#">
-									<p>POKEMON</p>
-									<p>꼬부기</p>
-								</a>
-							</div> <!-- img_wrap -->
-						</div> <!-- contents_boxes -->
-						
-						<div class="contents_boxes">
-							<div class="img_wrap">
-								<img alt="" src="./resources/upload/img/000101.png">
-								<a class="project_link" href="#">
-									<p>POKEMON</p>
-									<p>이상해씨</p>
-								</a>
-							</div> <!-- img_wrap -->
-						</div> <!-- contents_boxes -->
-						
-						<div class="contents_boxes">
-							<div class="img_wrap">
-								<img alt="" src="./resources/upload/img/000101.png">
-								<a class="project_link" href="#">
-									<p>POKEMON</p>
-									<p>이상해씨</p>
-								</a>
-							</div> <!-- img_wrap -->
-						</div> <!-- contents_boxes -->
-						
-						<div class="contents_boxes">
-							<div class="img_wrap">
-								<img alt="" src="./resources/upload/img/000101.png">
-								<a class="project_link" href="#">
-									<p>POKEMON</p>
-									<p>이상해씨</p>
-								</a>
-							</div> <!-- img_wrap -->
-						</div> <!-- contents_boxes -->
-						
-						<div class="contents_boxes">
-							<div class="img_wrap">
-								<img alt="" src="./resources/upload/img/000101.png">
-								<a class="project_link" href="#">
-									<p>POKEMON</p>
-									<p>이상해씨</p>
-								</a>
-							</div> <!-- img_wrap -->
-						</div> <!-- contents_boxes -->
-						
-						<div class="contents_boxes">
-							<div class="img_wrap">
-								<img alt="" src="./resources/upload/img/000101.png">
-								<a class="project_link" href="#">
-									<p>POKEMON</p>
-									<p>이상해씨</p>
-								</a>
-							</div> <!-- img_wrap -->
-						</div> <!-- contents_boxes -->
 						
 					</div> <!--section_wrap_right -->
 				

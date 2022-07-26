@@ -12,6 +12,19 @@
 	    scroll-behavior: smooth;
 		margin: 0;
     	padding: 0;
+    	
+    	font-variant: tabular-nums;
+	    line-height: 1.5715;
+	    background-color: #fff;
+	    font-feature-settings: 'tnum', "tnum";
+	    
+	    font-weight: normal;
+	    font-size: 15px;
+	    vertical-align: baseline;
+	    color: #000000;
+	    -webkit-text-size-adjust: none;
+	    text-rendering: geometricPrecision;
+	    -webkit-font-smoothing: antialiased;
 		
 	}
 	
