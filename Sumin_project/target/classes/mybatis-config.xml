@@ -8,8 +8,10 @@
  <configuration>
  
  	<typeAliases>
- 		<typeAlias type="com.Sproject.model.StudentsDAO" alias="dao"/>
- 		<typeAlias type="com.Sproject.model.StudentsDTO" alias="dto"/>
+ 		<typeAlias type="com.Sproject.model.StudentsDAO" alias="sdao"/>
+ 		<typeAlias type="com.Sproject.model.StudentsDTO" alias="sdto"/>
+ 		<typeAlias type="com.Sproject.model.AnswerDAO" alias="adao"/>
+ 		<typeAlias type="com.Sproject.model.AnswerDTO" alias="adto"/>
  	</typeAliases>
  
  </configuration>

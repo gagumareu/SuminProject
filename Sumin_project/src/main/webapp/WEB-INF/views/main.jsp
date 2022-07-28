@@ -31,14 +31,7 @@
 	    height: 53px;
 	}
 	
-	.section_title {
-	    color: #ff4a2b;
-	    font-size: 26px;
-	    font-family: 'Chakra Petch', sans-serif;
-	    font-weight: 600;
-	    line-height: 1.3;
 	
-	}
 	
 	.project_select_wrap {
 		border-bottom: 2px solid #ff4a2b;
@@ -47,13 +40,7 @@
 	    color: #ff4a2b;
 	    line-height: 55px;
 	}
-	.section_title {
-		color: #ff4a2b;
-	    font-size: 26px;
-	    font-family: 'Chakra Petch', sans-serif;
-	    font-weight: 600;
-	    line-height: 1.3;
-	}
+	
 	
 	
 	.text_wrap {
@@ -97,7 +84,14 @@
 		font-weight: 700;
 	}
 	
+	.section_title {
+	    color: #ff4a2b;
+	    font-size: 26px;
+	    font-family: 'Chakra Petch', sans-serif;
+	    font-weight: 600;
+	    line-height: 1.3;
 	
+	}
 	
 	
 	

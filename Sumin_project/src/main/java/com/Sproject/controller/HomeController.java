@@ -1,7 +1,11 @@
 package com.Sproject.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import java.util.Locale;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +15,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.Sproject.model.AnswerDAO;
+import com.Sproject.model.AnswerDTO;
 import com.Sproject.model.StudentsDAO;
 import com.Sproject.model.StudentsDTO;
 
@@ -31,6 +37,9 @@ public class HomeController {
 	
 	@Autowired
 	private StudentsDAO dao;
+	
+	@Autowired
+	private AnswerDAO adao;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
@@ -65,8 +74,12 @@ public class HomeController {
 	
 	
 	@RequestMapping("goAboutPage.do")
-	public String goAboutPage() {
+	public String goAboutPage(Model model) {
 		
+		List<StudentsDTO> list = this.dao.getStudentsList();
+		
+		model.addAttribute("studentsList", list);
+
 		return "about";
 	}
 	
@@ -83,9 +96,37 @@ public class HomeController {
 	}
 	
 	@RequestMapping("goAnswerPage.do")
-	public String goAnswerPage() {
+	public String goAnswerPage(Model model) {
+		
+		List<AnswerDTO> list = this.adao.getAndswerList();
+		
+		model.addAttribute("aList", list);
 		
 		return "answer";
 	}
 	
+	@RequestMapping("insertMessage.do")
+	public void insertAnswer(AnswerDTO dto, HttpServletResponse response) throws IOException {
+		
+		int check = this.adao.insertAnswer(dto);
+		
+		response.setContentType("text/html; charset=UTF-8");
+		
+		PrintWriter out = response.getWriter();
+		
+		if(check > 0) {
+			out.println("<script>");
+			out.println("alert('메시지 등록 성공')");
+			out.println("location.href='goAnswerPage.do'");
+			out.println("</script>");
+			
+		}else {
+			out.println("<script>");
+			out.println("alert('메시지 등록 실패')");
+			out.println("history.back()'");
+			out.println("</script>");
+			
+		}
+		
+	}
 }

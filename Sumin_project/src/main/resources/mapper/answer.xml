@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="adao">
+	
+	<insert id="insertAnswer" parameterType="adto">
+		<selectKey resultType="int" keyProperty="no" order="BEFORE">
+			select max(no) from answer
+		</selectKey>
+		insert into answer values(#{no} + 1, #{fname}, #{cont}, #{tname}, #{title}, sysdate)
+	</insert>
+	
+	<select id="getAnswerList" resultType="adto">
+		select * from answer order by no desc
+	</select>
+</mapper>
