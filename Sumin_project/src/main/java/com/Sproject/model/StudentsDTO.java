@@ -10,6 +10,6 @@ public class StudentsDTO {
 	private String ename; 
 	private String project_name;
 	private String images;
-	
+	private String email;
 
 }

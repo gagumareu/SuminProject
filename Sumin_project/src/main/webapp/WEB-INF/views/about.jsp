@@ -43,7 +43,11 @@
 	}
 	
 	.section_wrap {
-	
+	background: url('./resources/upload/intro/sample6.jpg');
+	background-size: cover;
+	animation: movebg 1100s linear infinite;
+	height: 100vh;
+/* 	background-repeat: repeat-y; */
 	}
 	
 	

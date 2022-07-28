@@ -90,7 +90,11 @@ public class HomeController {
 	}
 	
 	@RequestMapping("goStudentsPage.do")
-	public String goStudentsPage() {
+	public String goStudentsPage(Model model) {
+		
+		List<StudentsDTO> list = this.dao.getStudentsList();
+		
+		model.addAttribute("studentsList", list);
 		
 		return "students";
 	}
